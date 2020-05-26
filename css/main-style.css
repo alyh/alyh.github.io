@@ -57,7 +57,7 @@ section {
     transform: translate3d(-50%, -50%, 0);
 }
 
-.cover {
+.cover, .other-cover {
     margin: 0;
     height: 68vh;
     width: 100%;
@@ -69,14 +69,18 @@ section {
     background-size: 8em, cover;
 }
 
-.cover .wrapper:before {
+.cover .wrapper:before, .other-cover .wrapper:before {
 
     background: linear-gradient(to right, rgba(250, 170, 84, 1), rgba(250, 243, 84, 0.984));
     mix-blend-mode: difference;
 }
 
+.other-cover{
+    height:68vh;
+}
+
 .project-cover {
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     background: white;
 }
@@ -105,3 +109,34 @@ section {
     font-style:italic;
     padding-right:20px;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .name-header{
+        font-size:10vw;
+    }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+     .name-header{
+        font-size:10vw;
+    }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+     .name-header{
+        font-size:8vw;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+     .name-header{
+        font-size:6.5vw;
+    }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
