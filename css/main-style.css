@@ -1,0 +1,107 @@
+body {
+    padding-top: 56px;
+}
+
+/* NAVIGATION BAR STYLE */
+
+.navbar-brand span {
+    font-weight: 300;
+    font-size: 1.1rem;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 0 0 10px;
+    color: black;
+}
+
+.navbar-container {
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+}
+
+/*
+.navbar-nav {
+    margin-right: 10%;
+}
+*/
+/* GENERAL */
+
+section {
+    background-repeat: repeat;
+    position: relative;
+}
+
+.wrapper {
+    clip: rect(auto auto auto auto);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.wrapper:before {
+    box-sizing: border-box;
+    display: block;
+    position: fixed;
+    content: "";
+    /*  padding: 6em 10em;*/
+    width: 100%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.cover {
+    margin: 0;
+    height: 68vh;
+    width: 100%;
+    background: white;
+    background-image: url(single_tile3.svg);
+    /* fallback */
+    background-image: url(single_tile3.svg), linear-gradient(to right, rgba(26, 160, 204, 1), rgba(26, 160, 204, 1), rgba(100, 203, 243, 0.917));
+    /* W3C */
+    background-size: 8em, cover;
+}
+
+.cover .wrapper:before {
+
+    background: linear-gradient(to right, rgba(250, 170, 84, 1), rgba(250, 243, 84, 0.984));
+    mix-blend-mode: difference;
+}
+
+.project-cover {
+    height: 100vh;
+    width: 100%;
+    background: white;
+}
+
+.project-cover .wrapper:before {
+
+    background: linear-gradient(to right, rgba(250, 170, 84, 1), rgba(250, 243, 84, 0.984));
+    mix-blend-mode: normal;
+}
+
+.intro {
+    position:absolute;
+    z-index: 1000;
+    color: white;
+    margin-top:15vh;
+    margin-left:1vw;
+}
+
+.name-header{
+    font-size:8vw;
+    font-weight:bold;
+    font-style:italic;
+}
+.name-caption{
+    font-weight: 300!important;
+    font-style:italic;
+    padding-right:20px;
+}
