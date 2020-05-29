@@ -1,0 +1,18 @@
+.work-cover {
+    margin: 0;
+    height: 50vh;
+    width: 100%;
+
+    /* fallback */
+    background: white;
+    background-image: url(single_tile3.svg);
+    background-image: url(single_tile3.svg), linear-gradient(to right, rgba(26, 160, 204, 1), rgba(26, 160, 204, 1), rgba(100, 203, 243, 0.917));
+
+    background-size: 8em, cover;
+}
+
+.work-cover .wrapper:before{
+
+    background: linear-gradient(to right, rgba(250, 170, 84, 1), rgba(250, 243, 84, 0.984));
+    mix-blend-mode: difference;
+}

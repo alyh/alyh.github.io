@@ -1,0 +1,32 @@
+.resume-main{
+    width: 100%;
+
+    /* fallback */
+    background: white;
+    background-image: url(single_tile_purple.svg);
+    background-image: url(single_tile_purple.svg), linear-gradient(to right, rgb(148,33,147), rgb(232,118,231));
+
+    background-size: 8em, cover;
+}
+
+.resume-container{
+    height:auto;
+    padding-top:10vh;
+    padding-bottom:10vh;
+    text-align:center;
+}
+
+.resume-download{
+    padding:10px;
+    background:white;
+    color:rgb(148,33,147);
+    font-weight:500;
+    border: 1px solid white;
+}
+
+.resume-download:hover{
+    padding:10px;
+    background:rgba(255,255,255,0);
+    text-decoration: none;
+    color:white;
+}
