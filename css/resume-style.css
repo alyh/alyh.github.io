@@ -16,17 +16,17 @@
     text-align:center;
 }
 
-.resume-download{
+.resume-download:hover{
     padding:10px;
     background:white;
     color:rgb(148,33,147);
     font-weight:500;
-    border: 1px solid white;
+    text-decoration: none;
 }
 
-.resume-download:hover{
+.resume-download{
     padding:10px;
     background:rgba(255,255,255,0);
-    text-decoration: none;
+    border: 1px solid white;
     color:white;
 }
