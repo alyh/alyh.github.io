@@ -180,7 +180,7 @@ section {
         font-size: 7vw;
     }
 
-    .name-captionm,
+    .name-caption,
     .project-caption {
         font-size: 1.7em;
     }
@@ -203,4 +203,8 @@ section {
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+    .container{
+        max-width:1000px;
+    }
+}

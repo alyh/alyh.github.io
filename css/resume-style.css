@@ -16,17 +16,29 @@
     text-align:center;
 }
 
-.resume-download:hover{
+a.resume-download{
     padding:10px;
-    background:white;
-    color:rgb(148,33,147);
-    font-weight:500;
-    text-decoration: none;
+    font-weight:300;
+    position: relative;
+    cursor:pointer;
+    background:rgba(255,255,255,0.2);
+    color:white;
+    text-decoration:none;
 }
 
-.resume-download{
-    padding:10px;
-    background:rgba(255,255,255,0);
-    border: 1px solid white;
-    color:white;
+a.resume-download:before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
 }
+a.resume-download:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+

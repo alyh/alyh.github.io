@@ -17,10 +17,24 @@
     <link href="css/main-style.css" rel="stylesheet">
     <link href="css/work-style.css" rel="stylesheet">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169015472-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-169015472-1');
+
+    </script>
+
 </head>
 
 <body>
-     <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-sm navbar-light">
         <div class="container navbar-container">
             <div class="navbar-header">
@@ -47,29 +61,56 @@
 
     <!-- Page Content -->
     <div class="container">
-            <div class="intro container">
-                <h1 class="name-header">work</h1>
-                <h2 class="name-caption">a selection of personal, research, and school projects - shown chronologically</h2>
+        <div class="intro container">
+            <h1 class="name-header">work</h1>
+            <h2 class="name-caption">a selection of personal, research, and school projects - shown chronologically</h2>
+        </div>
+    </div>
+
+    <section class="cover work-cover">
+        <div class="wrapper container"></div>
+    </section>
+    <section class="project-cover container">
+        <div class="project container">
+            <h1 class="project-header">Project Title #1</h1>
+            <div class="row skill-row">
+                <div class="col">
+                    <span class="skill-badge">Skill #1</span>
+                    <span class="skill-badge">Design</span>
+                    <span class="skill-badge">Mechanical Engineering</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 order-md-2" style="overflow:hidden;padding-bottom: 20px;"><img src="images/placeholder.png"></div>
+                <div class="col-md-8 order-md-1">
+                    <h2 class="project-caption">A personal project description - brief and to the point. Maybe two sentences long and we can have capital letters again</h2>
+                    <div class="read-more-div"><a class="read-more-link">Keep Reading &rarr;</a></div>
+                </div>
+            </div>
+            <h1 class="project-header top-buffer">Project Title #1</h1>
+            <div class="row skill-row">
+                <div class="col">
+                    <span class="skill-badge">Skill #1</span>
+                    <span class="skill-badge">Design</span>
+                    <span class="skill-badge">Mechanical Engineering</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 order-md-2" style="overflow:hidden;"><img src="images/placeholder.png"></div>
+                <div class="col-md-8 order-md-1">
+                    <h2 class="project-caption">A personal project description - brief and to the point. Maybe two sentences long and we can have capital letters again</h2>
+                    <div class="read-more-div"><a class="read-more-link">Keep Reading &rarr;</a></div>
+                </div>
             </div>
         </div>
-
-        <section class="cover work-cover">
-            <div class="wrapper container"></div>
-        </section>
-        <section class="project-cover container">
-            <div class="project container">
-                <h1 class="project-header">work highlights</h1>
-                <h2 class="project-caption">2-4 project highlights<br><br> <strong>past: </strong>product design at Apple, optical engineering at IMAX, software developer at OICR
-                </h2>
-            </div>
-            <div class="wrapper container"></div>
-        </section>
-        <section class="other-cover">
-            <div class="wrapper container"></div>
-        </section>
+        <div class="wrapper container"></div>
+    </section>
+    <section class="other-cover">
+        <div class="wrapper container"></div>
+    </section>
     <!-- /.container -->
 
-   <!-- Footer -->
+    <!-- Footer -->
     <footer class="py-4">
         <div class="container">
 
