@@ -21,7 +21,6 @@
 }
 
 .more-about-cover {
-    height: 80vh;
     width: 100%;
     background: white;
 }
@@ -64,7 +63,7 @@ a.find-me-link{
     background:rgba(255,255,255,0.2);
     padding: 5px 5px 5px 10px;
     color:white;
-    text-decoration: none;
+    text-decoration:none;
 }
 
 a.find-me-link:before{
@@ -84,7 +83,7 @@ a.find-me-link:hover:before {
 }
 
 .inspire-me{
-    line-height: 44px;
+    line-height: 3.5rem;
 }
 
 a.inspire-me-link{
@@ -96,6 +95,8 @@ a.inspire-me-link{
     padding: 5px 5px 5px 10px;
     color:black;
     text-decoration: none;
+    line-height:2rem;
+    display:inline-block;
 }
 
 a.inspire-me-link:before{
@@ -128,6 +129,9 @@ a.inspire-me-link:hover:before {
     .about-cover{
         height:150vh;
     }
+    .more-about-cover{
+        height:100vh;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -157,6 +161,9 @@ a.inspire-me-link:hover:before {
     }
     .about-cover{
         height:70vh;
+    }
+    .more-about-cover {
+        height: 75vh;
     }
 }
 
