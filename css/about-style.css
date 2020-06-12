@@ -84,6 +84,7 @@ a.find-me-link:hover:before {
 
 .inspire-me{
     line-height: 3.5rem;
+    padding-top:15px;
 }
 
 a.inspire-me-link{
@@ -146,6 +147,9 @@ a.inspire-me-link:hover:before {
     }
     .about-cover{
         height:150vh;
+    }
+    .more-about-cover {
+        height: 70vh;
     }
 }
 

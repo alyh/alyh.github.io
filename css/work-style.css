@@ -1,3 +1,9 @@
+.wrapper:before {
+    top: 30vh;
+    height: 50vh;
+    transform: translate3d(-50%, -25%, 0);
+}
+
 .work-cover {
     margin: 0;
     height: 50vh;
@@ -43,6 +49,8 @@ a.read-more-link {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.3);
     padding: 5px 5px 5px 10px;
+    text-decoration: none;
+    color: black;
 }
 
 a.read-more-link:before {
@@ -63,11 +71,12 @@ a.read-more-link:hover:before {
 }
 
 .project-img {
-    max-width: 100%;
-    max-height: 25vh;
+    /*   max-width: 100%;*/
 }
 
-.img-div {}
+.img-div {
+    /* text-align: center;*/
+}
 
 .skill-badge {
     display: inline-block;
@@ -85,17 +94,28 @@ a.read-more-link:hover:before {
     margin-top: 15%;
 }
 
-/* Extra small devices (phones, 600px and down) */
+.first-top-buffer {
+    margin-top: 8%;
+}
+
+/* Extra small devices (phones, 400px and down) */
 @media only screen and (max-width: 400px) {
-  .project-cover {
-        height:480vh;
+    .project-cover {
+        height: 560vh;
     }
-    .project-caption{
-        font-size:1rem;
+
+    .project-caption {
+        font-size: 1rem;
+    }
+
+    .wrapper:before {
+        top: 30vh;
+        height: 70vh;
+        transform: translate3d(-50%, -20%, 0);
     }
 }
 
-/* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 400px and up) */
 @media only screen and (min-width: 400px) {
     .project-header {
         font-size: 6vw;
@@ -107,7 +127,15 @@ a.read-more-link:hover:before {
     }
 
     .project-cover {
-        height: 390vh;
+        height: 420vh;
+    }
+    .wrapper:before {
+        top: 30vh;
+        height: 65vh;
+        transform: translate3d(-50%, -20%, 0);
+    }
+    .top-buffer{
+        margin-top:30%;
     }
 }
 
@@ -123,7 +151,10 @@ a.read-more-link:hover:before {
     }
 
     .project-cover {
-        height: 380vh;
+        height: 375vh;
+    }
+    .top-buffer{
+        margin-top:15%;
     }
 }
 
@@ -139,12 +170,17 @@ a.read-more-link:hover:before {
     }
 
     .project-cover {
-        height: 270vh;
+        height: 320vh;
     }
 
     .project-img {
         margin: -15%;
-        max-height: 30vh;
+        /*     max-height: 30vh;*/
+    }
+    .wrapper:before {
+        top: 30vh;
+        height: 50vh;
+        transform: translate3d(-50%, -30%, 0);
     }
 }
 
@@ -160,7 +196,7 @@ a.read-more-link:hover:before {
     }
 
     .project-cover {
-        height: 300vh;
+        height: 330vh;
     }
 }
 
@@ -170,6 +206,6 @@ a.read-more-link:hover:before {
     }
 
     .project-cover {
-        height: 300vh;
+        height: 330vh;
     }
 }
