@@ -70,7 +70,7 @@
     <section class="cover work-cover">
         <div class="wrapper container"></div>
     </section>
-    <section class="project-cover container">
+    <section id="p-cover" class="project-cover container">
         <div class="project container">
             <h1 class="project-header first-top-buffer">Bio-Inspired Adhesives for Human Skin</h1>
             <div class="row skill-row">
@@ -170,7 +170,7 @@
                 <div class="col-md-8 order-md-1">
                     <h2 class="project-caption">Cancer donor datasets are visualized with JavaScript and biological pathways are mapped for simple navigation. Done as part of a co-op for the Ontario Institute for Cancer Research.</h2>
                     <div class="read-more-div"><a class="read-more-link" href="https://dcc.icgc.org/projects/history">Example Visualization Work &rarr;</a></div>
-                     <div class="read-more-div"><a class="read-more-link" href="https://dcc.icgc.org/genesets/R-HSA-9014826/pathway-viewer">Example Pathway Mapping &rarr;</a></div>
+                     <div id="last-link" class="read-more-div"><a class="read-more-link" href="https://dcc.icgc.org/genesets/R-HSA-9014826/pathway-viewer">Example Pathway Mapping &rarr;</a></div>
                 </div>
             </div>
             <!-- end of project --> 
@@ -195,6 +195,22 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function adjustHeight(e){  
+            var e1 = document.getElementById("last-link");
+            var top_position = e1.getBoundingClientRect().top;
+            var e2 = document.getElementById("p-cover");
+
+            if(top_position < 2000)
+                e2.style.height="400vh";
+            else
+                e2.style.height=top_position-200+"px";
+        }
+        window.addEventListener('resize',adjustHeight);
+        adjustHeight();
+        
+    </script>
 
 </body>
 
