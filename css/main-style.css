@@ -63,16 +63,15 @@ section {
     content: "";
     /*  padding: 6em 10em;*/
     width: 100%;
-    height: 70vh;
-    top: 50vh;
+    height: 50vh;
+    top: 30vh;
     left: 50vw;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -25%, 0);
 }
 
 .cover,
 .other-cover {
     margin: 0;
-    height: 73vh;
     width: 100%;
 
     /* fallback */
@@ -94,6 +93,10 @@ section {
     height: 40vh;
 }
 
+.cover{
+    height: 50vh;
+}
+
 .project-cover {
     height: 80vh;
     width: 100%;
@@ -113,6 +116,10 @@ section {
     margin-top: 15vh;
     margin-left: 1vw;
     padding-right:5vw;
+}
+
+.intro-buffer{
+    margin-top:7%;
 }
 
 .project {
@@ -150,7 +157,12 @@ section {
 
     .name-caption,
     .project-caption {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+    }
+    .wrapper:before {
+        top: 30vh;
+        height: 70vh;
+        transform: translate3d(-50%, -20%, 0);
     }
 }
 
@@ -166,7 +178,7 @@ section {
 
     .name-caption,
     .project-caption {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -183,6 +195,11 @@ section {
     .name-caption,
     .project-caption {
         font-size: 1.7em;
+    }
+    .wrapper:before {
+        top: 30vh;
+        height: 50vh;
+        transform: translate3d(-50%, -30%, 0);
     }
 }
 

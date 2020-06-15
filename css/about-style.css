@@ -1,3 +1,10 @@
+.wrapper:before {
+    height: 70vh;
+    top: 50vh;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+
 .about-cover {
     margin: 0;
     width: 100%;
