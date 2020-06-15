@@ -93,12 +93,12 @@ section {
     height: 40vh;
 }
 
-.cover{
+.cover {
     height: 50vh;
 }
 
 .project-cover {
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     background: white;
 }
@@ -109,17 +109,18 @@ section {
     mix-blend-mode: normal;
 }
 
-.intro, .project {
+.intro,
+.project {
     position: absolute;
     z-index: 1000;
     color: white;
     margin-top: 15vh;
     margin-left: 1vw;
-    padding-right:5vw;
+    padding-right: 5vw;
 }
 
-.intro-buffer{
-    margin-top:7%;
+.intro-buffer {
+    margin-top: 5%;
 }
 
 .project {
@@ -145,6 +146,44 @@ section {
     padding-right: 20px;
 }
 
+.card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+a.read-more-link {
+    padding-bottom: 5px;
+    font-weight: 300;
+    position: relative;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 5px 5px 5px 10px;
+    text-decoration: none;
+    color: black;
+    display:inline-block;
+}
+
+a.read-more-link:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+a.read-more-link:hover:before {
+    visibility: visible;
+    width: 100%;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .name-header {
@@ -155,14 +194,27 @@ section {
         font-size: 9vw;
     }
 
-    .name-caption,
-    .project-caption {
+    .name-caption {
         font-size: 1.4rem;
     }
+
+    .read-more-link,
+    .project-caption {
+        font-size: 1.2rem;
+    }
+
     .wrapper:before {
         top: 30vh;
         height: 70vh;
         transform: translate3d(-50%, -20%, 0);
+    }
+
+    .project-cover {
+        height: 150vh;
+    }
+
+    .card {
+        width: 70%;
     }
 }
 
@@ -176,9 +228,21 @@ section {
         font-size: 7vw;
     }
 
-    .name-caption,
-    .project-caption {
+    .name-caption {
         font-size: 1.4rem;
+    }
+
+    .read-more-link,
+    .project-caption {
+        font-size: 1.2rem;
+    }
+
+    .project-cover {
+        height: 150vh;
+    }
+
+    .card {
+        width: 70%;
     }
 }
 
@@ -192,14 +256,29 @@ section {
         font-size: 5.5vw;
     }
 
-    .name-caption,
-    .project-caption {
+    .name-caption {
         font-size: 1.7em;
     }
+
+    .read-more-link,
+    .project-caption {
+        font-size: 1.2rem;
+    }
+
+
     .wrapper:before {
         top: 30vh;
         height: 50vh;
         transform: translate3d(-50%, -30%, 0);
+    }
+
+    .project-cover {
+        height: 100vh;
+    }
+
+    .card {
+        width: 100%;
+        margin-left: 0
     }
 }
 
@@ -213,15 +292,18 @@ section {
         font-size: 4.5vw;
     }
 
-    .name-caption,
-    .project-caption {
+    .name-caption {
         font-size: 1.8rem;
+    }
+
+    .project-caption {
+        font-size: 1.4rem;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .container{
-        max-width:1000px;
+    .container {
+        max-width: 1000px;
     }
 }

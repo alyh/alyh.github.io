@@ -42,34 +42,6 @@
     margin-top: 20px;
 }
 
-a.read-more-link {
-    padding-bottom: 5px;
-    font-weight: 300;
-    position: relative;
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.3);
-    padding: 5px 5px 5px 10px;
-    text-decoration: none;
-    color: black;
-}
-
-a.read-more-link:before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: #000;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-}
-
-a.read-more-link:hover:before {
-    visibility: visible;
-    width: 100%;
-}
-
 .project-img {
     /*   max-width: 100%;*/
 }

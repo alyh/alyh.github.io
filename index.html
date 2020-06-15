@@ -77,14 +77,45 @@
         <section class="cover">
             <div class="wrapper container"></div>
         </section>
-        <section class="project-cover container">
+        <section id="proj-cover" class="project-cover container">
             <div class="project container">
-                <h1 class="project-header intro-buffer">work highlights</h1>
-                <h2 class="project-caption">2-4 project highlights<br><br> 
-                    <strong>now: </strong>researching bio-inspired adhesives at the University of Toronto<br><br>
-                    <strong>past: </strong>product design at Apple, optical engineering at IMAX, software developer at OICR
-                    
-                </h2>
+                <div class="row">
+                    <div class="col">
+                        <h1 id="first-project-item" class="project-header intro-buffer">work highlights</h1><br>
+                        <h2 class="project-caption">
+                            <strong>now: </strong>researching bio-inspired adhesives at the University of Toronto<br><br>
+                            <strong>past: </strong>product design at Apple, optical engineering at IMAX, software developer at OICR<br><br>
+                            <strong>select projects:</strong><br><br>
+
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 class="project-caption">Project Title</h2>
+                                <img style="width:100%" src="images/gas.svg">
+                                This is a project caption
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 class="project-caption">Project Title</h2>
+                                <img style="width:100%" src="images/gas.svg">
+                                This is a project caption
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col">
+                        <div id="see-more-last-link" class="read-more-div"><a class="read-more-link" href="work.html">See all projects and more details&nbsp;&rarr;</a></div>
+                    </div>
+                </div>
+
             </div>
             <div class="wrapper container"></div>
         </section>
@@ -112,14 +143,44 @@
         function resetHeight() {
             // reset the body height to that of the inner browser
             document.body.style.height = window.innerHeight + "px";
+
+            var e_last = document.getElementById("see-more-last-link");
+            var last_position = e_last.getBoundingClientRect().top;
+            var e_first = document.getElementById("first-project-item");
+            var first_position = e_first.getBoundingClientRect().top;
+
+
+            var e_cover = document.getElementById("proj-cover");
+            var newheight = last_position - first_position + 200;
+
+            e_cover.style.height = newheight + "px";
+            console.log(newheight);
         }
-        // reset the height whenever the window's resized
-        window.addEventListener("resize", resetHeight);
-        // called to initially set the height.
+
+        jQuery(document).ready(function($) {
+
+            // Store the window width
+            var windowWidth = $(window).width();
+
+            // Resize Event
+            $(window).resize(function() {
+
+                // Check window width has actually changed and it's not just iOS triggering a resize event on scroll
+                if ($(window).width() != windowWidth) {
+
+                    // Update the window width for next time
+                    windowWidth = $(window).width();
+                    resetHeight();
+
+                }
+
+            });
+
+        });
+
         resetHeight();
 
     </script>
-
 </body>
 
 </html>
