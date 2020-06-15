@@ -88,7 +88,7 @@
                     <div class="read-more-div"><a class="read-more-link">Keep Reading &rarr;</a></div>
                 </div>
             </div>
-            <!-- next project --> 
+            <!-- next project -->
             <h1 class="project-header top-buffer">ParkFast</h1>
             <div class="row skill-row">
                 <div class="col">
@@ -98,14 +98,14 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 order-md-2 img-div"><img class="project-img"  src="images/park.svg"></div>
+                <div class="col-md-4 order-md-2 img-div"><img class="project-img" src="images/park.svg"></div>
                 <div class="col-md-8 order-md-1">
                     <h2 class="project-caption">Can we predict where and when a parking spot will free up? This prediction model is coupled with a computer vision model to find empty spots on the streets and in parking lots.</h2>
                     <div class="read-more-div"><a class="read-more-link">Keep Reading &rarr;</a></div>
                 </div>
             </div>
-            <!-- end of project --> 
-            <!-- next project --> 
+            <!-- end of project -->
+            <!-- next project -->
             <h1 class="project-header top-buffer">Erasable Printer Ink</h1>
             <div class="row skill-row">
                 <div class="col">
@@ -121,8 +121,8 @@
                     <div class="read-more-div"><a class="read-more-link">Keep Reading &rarr;</a></div>
                 </div>
             </div>
-            <!-- end of project --> 
-            <!-- next project --> 
+            <!-- end of project -->
+            <!-- next project -->
             <h1 class="project-header top-buffer">Reactor Head for Gas Deposition</h1>
             <div class="row skill-row">
                 <div class="col">
@@ -132,14 +132,14 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 order-md-2 img-div"><img class="project-img"  src="images/gas.svg"></div>
+                <div class="col-md-4 order-md-2 img-div"><img class="project-img" src="images/gas.svg"></div>
                 <div class="col-md-8 order-md-1">
                     <h2 class="project-caption">A re-imagined 3D-printed reactor head for gas deposition allows for rapid iteration and testing. The design of the gas pathways are modelled with ANSYS Fluent to achieve a uniform deposition. <br><br>Work done as part of a research scholarship with Professor Musselman at the Univeristy of Waterloo.</h2>
                     <div class="read-more-div"><a class="read-more-link">Keep Reading &rarr;</a></div>
                 </div>
             </div>
-            <!-- end of project --> 
-            <!-- next project --> 
+            <!-- end of project -->
+            <!-- next project -->
             <h1 class="project-header top-buffer">Cryo-Holder for TEMs</h1>
             <div class="row skill-row">
                 <div class="col">
@@ -149,14 +149,14 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 order-md-2 img-div"><img class="project-img"  src="images/cryo.svg"></div>
+                <div class="col-md-4 order-md-2 img-div"><img class="project-img" src="images/cryo.svg"></div>
                 <div class="col-md-8 order-md-1">
                     <h2 class="project-caption">When you cool samples to cryogenic temperatures (&lt;130&deg;C), even black-body radiation can overheat things. The sample holder is designed to maximize cooling while minimizing vibrations.<br><br>Work done as part of a research scholarship with Professor Sciaini at the Univeristy of Waterloo.</h2>
                     <div class="read-more-div"><a class="read-more-link">Keep Reading &rarr;</a></div>
                 </div>
             </div>
-            <!-- end of project --> 
-            <!-- next project --> 
+            <!-- end of project -->
+            <!-- next project -->
             <h1 class="project-header top-buffer">Cancer Dataset and Pathway Visualizations</h1>
             <div class="row skill-row">
                 <div class="col">
@@ -170,10 +170,10 @@
                 <div class="col-md-8 order-md-1">
                     <h2 class="project-caption">Cancer donor datasets are visualized with JavaScript and biological pathways are mapped for simple navigation. <br><br>Work done as part of a co-op for the Ontario Institute for Cancer Research.</h2>
                     <div class="read-more-div"><a class="read-more-link" href="https://dcc.icgc.org/projects/history">Example Visualization Work &rarr;</a></div>
-                     <div id="last-link" class="read-more-div"><a class="read-more-link" href="https://dcc.icgc.org/genesets/R-HSA-9014826/pathway-viewer">Example Pathway Mapping &rarr;</a></div>
+                    <div id="last-link" class="read-more-div"><a class="read-more-link" href="https://dcc.icgc.org/genesets/R-HSA-9014826/pathway-viewer">Example Pathway Mapping &rarr;</a></div>
                 </div>
             </div>
-            <!-- end of project --> 
+            <!-- end of project -->
         </div>
         <div class="wrapper container"></div>
     </section>
@@ -195,25 +195,49 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    
+
     <script>
-        function adjustHeight(e){  
+        
+        function adjustHeight(e) {
             var e_last = document.getElementById("last-link");
             var last_position = e_last.getBoundingClientRect().top;
             var e_first = document.getElementById("first-item");
             var first_position = e_first.getBoundingClientRect().top;
-            
-            
-            var e_cover = document.getElementById("p-cover");
-            var newheight = last_position-first_position+450;
 
-            if(newheight > e_cover.style.height)
-                console.log(newheight);
-                e_cover.style.height=newheight+"px";
+
+            var e_cover = document.getElementById("p-cover");
+            var newheight = last_position - first_position + 450;
+
+            e_cover.style.height = newheight + "px";
+            console.log(newheight);
         }
-        window.addEventListener('resize',adjustHeight);
-        adjustHeight();
         
+        jQuery(document).ready(function($) {
+
+            // Store the window width
+            var windowWidth = $(window).width();
+
+            // Resize Event
+            $(window).resize(function() {
+
+                // Check window width has actually changed and it's not just iOS triggering a resize event on scroll
+                if ($(window).width() != windowWidth) {
+
+                    // Update the window width for next time
+                    windowWidth = $(window).width();
+
+                    adjustHeight();
+
+                }
+
+                // Otherwise do nothing
+
+            });
+
+        });
+
+        adjustHeight();
+
     </script>
 
 </body>
