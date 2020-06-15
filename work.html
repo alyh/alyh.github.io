@@ -205,11 +205,9 @@
             
             
             var e_cover = document.getElementById("p-cover");
+            var newheight = last_position-first_position+450;
 
-            if(last_position < 2000)
-                e_cover.style.height="400vh"; 
-            else
-                var newheight = last_position-first_position+450;
+            if(newheight > e_cover.style.height)
                 console.log(newheight);
                 e_cover.style.height=newheight+"px";
         }
