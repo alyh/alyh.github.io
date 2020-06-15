@@ -72,7 +72,7 @@
     </section>
     <section id="p-cover" class="project-cover container">
         <div class="project container">
-            <h1 class="project-header first-top-buffer">Bio-Inspired Adhesives for Human Skin</h1>
+            <h1 id="first-item" class="project-header first-top-buffer">Bio-Inspired Adhesives for Human Skin</h1>
             <div class="row skill-row">
                 <div class="col">
                     <span class="skill-badge">Design</span>
@@ -149,7 +149,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 order-md-2 img-div"><img class="project-img"  src="images/drawing.svg"></div>
+                <div class="col-md-4 order-md-2 img-div"><img class="project-img"  src="images/cryo.svg"></div>
                 <div class="col-md-8 order-md-1">
                     <h2 class="project-caption">When you cool samples to cryogenic temperatures (&lt;130&deg;C), even black-body radiation can overheat things. The sample holder is designed to maximize cooling while minimizing vibrations.<br><br>Work done as part of a research scholarship with Professor Sciaini at the Univeristy of Waterloo.</h2>
                     <div class="read-more-div"><a class="read-more-link">Keep Reading &rarr;</a></div>
@@ -198,14 +198,20 @@
     
     <script>
         function adjustHeight(e){  
-            var e1 = document.getElementById("last-link");
-            var top_position = e1.getBoundingClientRect().top;
-            var e2 = document.getElementById("p-cover");
+            var e_last = document.getElementById("last-link");
+            var last_position = e_last.getBoundingClientRect().top;
+            var e_first = document.getElementById("first-item");
+            var first_position = e_first.getBoundingClientRect().top;
+            
+            
+            var e_cover = document.getElementById("p-cover");
 
-            if(top_position < 2000)
-                e2.style.height="400vh";
+            if(last_position < 2000)
+                e_cover.style.height="400vh"; 
             else
-                e2.style.height=top_position-200+"px";
+                var newheight = last_position-first_position+400;
+                console.log(newheight);
+                e_cover.style.height=newheight+"px";
         }
         window.addEventListener('resize',adjustHeight);
         adjustHeight();
