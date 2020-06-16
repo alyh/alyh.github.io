@@ -10,6 +10,10 @@ strong {
     font-weight: bold;
 }
 
+.navbar-light .navbar-toggler {
+    border: none;
+}
+
 /* NAVIGATION BAR STYLE */
 
 .navbar-brand span {
@@ -135,6 +139,12 @@ section {
     font-style: italic;
 }
 
+.name-header .letter {
+    display: inline-block;
+    letter-spacing: 2px;
+
+}
+
 .project-header {
     font-size: 5vw;
 }
@@ -164,7 +174,8 @@ a.read-more-link {
     padding: 5px 5px 5px 10px;
     text-decoration: none;
     color: black;
-    display:inline-block;
+    display: inline-block;
+    line-height: 2rem;
 }
 
 a.read-more-link:before {

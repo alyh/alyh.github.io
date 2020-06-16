@@ -73,7 +73,7 @@
 /* Extra small devices (phones, 400px and down) */
 @media only screen and (max-width: 400px) {
     .project-cover {
-        height: 560vh;
+        height: 610vh;
     }
 
     .project-caption {

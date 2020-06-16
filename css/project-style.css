@@ -1,0 +1,155 @@
+.work-cover {
+    margin: 0;
+    height: 42vh;
+    width: 100%;
+
+    /* fallback */
+    background: white;
+    background-image: url(single_tile4.svg);
+    background-image: url(single_tile4.svg), linear-gradient(to right, rgba(250, 170, 84, 1), rgba(250, 243, 84, 0.984));;
+
+    background-size: 8em, cover;
+}
+
+.test{
+     background: red;
+    height:auto;
+    width:100%;
+     background-image: url(single_tile4.svg), linear-gradient(to right, rgba(250, 170, 84, 1), rgba(250, 243, 84, 0.984));;
+
+    background-size: 8em, cover;
+}
+
+.project-intro {
+    position: absolute;
+    z-index: 1000;
+    color: black;
+    margin-top: 8vh;
+    margin-left: 1vw;
+    padding-right: 5vw;
+}
+
+.other-cover {
+    height: 30vh;
+    
+    /* fallback */
+    background: white;
+    background-image: url(single_tile4.svg);
+    background-image: url(single_tile4.svg), linear-gradient(to right, rgba(250, 170, 84, 1), rgba(250, 243, 84, 0.984));
+    background-size: 8em, cover;
+}
+
+.project-cover{
+    padding-left:20px;
+}
+
+.project-header {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.project-caption {
+    font-weight: 300 !important;
+    font-style: normal;
+    padding-right: 20px;
+}
+.project-intro-tag{
+    font-weight: 600 !important;
+    font-style:italic;
+    font-size:1rem;
+    color:black;
+    text-transform:uppercase;
+} 
+
+.skill-badge {
+    display: inline-block;
+    padding: 7px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+}
+
+.skill-row {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.top-buffer{
+    margin-top:30px;
+}
+
+/* Extra small devices (phones, 400px and down) */
+@media only screen and (max-width: 400px) {
+    .project-cover {
+        height: 200vh;
+    }
+
+    .project-caption {
+        font-size: 1rem;
+    }
+}
+
+
+/* Extra small devices (phones, 400px and up) */
+@media only screen and (min-width: 400px) {
+    .project-header {
+        font-size: 7.5vw;
+    }
+
+    .read-more-link,
+    .project-caption {
+        font-size: 1.3rem;
+    }
+    .work-cover{
+        height:60vh;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .project-header {
+        font-size: 6vw;
+    }
+
+    .read-more-link,
+    .project-caption {
+        font-size: 1.3rem;
+    }
+    .work-cover{
+        height:55h;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .project-header {
+        font-size: 5vw;
+    }
+
+    .read-more-link,
+    .project-caption {
+        font-size: 1.5em;
+    }
+    .work-cover{
+        height:50vh;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .project-header {
+        font-size: 4vw;
+    }
+    .work-cover{
+        height:44vh;
+    }
+
+    .read-more-link,
+    .project-caption {
+        font-size: 1.7rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .project-header {
+        font-size: 3.5vw;
+    }
+}
