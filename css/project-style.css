@@ -1,6 +1,5 @@
 .work-cover {
     margin: 0;
-    height: 42vh;
     width: 100%;
 
     /* fallback */
@@ -11,17 +10,13 @@
     background-size: 8em, cover;
 }
 
-.test{
-     background: red;
-    height:auto;
-    width:100%;
-     background-image: url(single_tile4.svg), linear-gradient(to right, rgba(250, 170, 84, 1), rgba(250, 243, 84, 0.984));;
-
-    background-size: 8em, cover;
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .project-intro {
-    position: absolute;
     z-index: 1000;
     color: black;
     margin-top: 8vh;
@@ -30,8 +25,6 @@
 }
 
 .other-cover {
-    height: 30vh;
-    
     /* fallback */
     background: white;
     background-image: url(single_tile4.svg);
@@ -70,7 +63,7 @@
 
 .skill-row {
     padding-top: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 }
 .top-buffer{
     margin-top:30px;
@@ -78,9 +71,6 @@
 
 /* Extra small devices (phones, 400px and down) */
 @media only screen and (max-width: 400px) {
-    .project-cover {
-        height: 200vh;
-    }
 
     .project-caption {
         font-size: 1rem;
@@ -98,9 +88,6 @@
     .project-caption {
         font-size: 1.3rem;
     }
-    .work-cover{
-        height:60vh;
-    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -112,9 +99,6 @@
     .read-more-link,
     .project-caption {
         font-size: 1.3rem;
-    }
-    .work-cover{
-        height:55h;
     }
 }
 
@@ -128,9 +112,6 @@
     .project-caption {
         font-size: 1.5em;
     }
-    .work-cover{
-        height:50vh;
-    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -138,10 +119,6 @@
     .project-header {
         font-size: 4vw;
     }
-    .work-cover{
-        height:44vh;
-    }
-
     .read-more-link,
     .project-caption {
         font-size: 1.7rem;

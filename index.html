@@ -15,6 +15,7 @@
 
     <!-- style sheet -->
     <link href="css/main-style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169015472-1"></script>
@@ -70,7 +71,12 @@
             <div class="intro container">
                 <h1 class="name-header">aly hassan</h1>
                 <h2 class="name-caption">mechanical engineer working at the intersection of design, materials engineering, and data science
-                    <br><br>
+                    <br>
+                    <div class="quick-links-div">
+                        <a id="linkedin-link" class="quick-link" href="https://www.linkedin.com/in/alyhassan1/"><i class="fa fa-linkedin"></i></a>
+                        <a id="github-link" class="quick-link" href="https://github.com/alyh"><i class="fa fa-github"></i></a>
+                        <a id="twitter-link" class="quick-link" href="https://twitter.com/alyyhsn"><i class="fa fa-twitter"></i></a>
+                    </div>
                 </h2>
             </div>
         </div>
@@ -92,21 +98,21 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 d-flex align-items-stretch">
                         <div class="card">
                             <div class="card-body">
-                                <h2 class="project-caption">Project Title</h2>
-                                <img style="width:100%" src="images/gas.svg">
-                                This is a project caption
+                                <h2 class="project-caption">Bio-Inspired Adhesives</h2>
+                                <img style="width:100%;max-height:8em;" src="images/bioadhesives.svg"><br><br>
+                                How can we enable the future of human skin attachment?
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 align-items-stretch d-flex">
                         <div class="card">
                             <div class="card-body">
-                                <h2 class="project-caption">Project Title</h2>
-                                <img style="width:100%" src="images/gas.svg">
-                                This is a project caption
+                                <h2 class="project-caption">ParkFast</h2>
+                                <img style="width:100%;max-height:8em;" src="images/park.svg">
+                                Can we make parking easier without reinventing the car or the parking space?
                             </div>
                         </div>
                     </div>
@@ -158,7 +164,6 @@
                 duration: 1200,
                 delay: (el, i) => 0 + 60 * i
             });
-
     </script>
     <script>
         function resetHeight() {
@@ -173,11 +178,11 @@
             var e_cover = document.getElementById("proj-cover");
             var newheight = last_position - first_position + 200;
 
-            if (newheight < 650){
+            if (newheight < 650) {
                 newheight = 800;
             }
             e_cover.style.height = newheight + "px";
-            
+
         }
 
         jQuery(document).ready(function($) {
@@ -200,7 +205,7 @@
             });
 
         });
-        window.addEventListener('load',resetHeight);
+        window.addEventListener('load', resetHeight);
 
     </script>
 
