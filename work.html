@@ -9,7 +9,7 @@
     <meta name="author" content="Aly Hassan">
 
     <title>Aly Hassan - Work and Projects</title>
-    
+
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -26,6 +26,7 @@
     <!-- style sheet -->
     <link href="css/main-style.css" rel="stylesheet">
     <link href="css/work-style.css" rel="stylesheet">
+    <link href="css/floating-button.css" rel="stylesheet">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169015472-1"></script>
@@ -55,14 +56,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">about</a>
+                    </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="work.html">work</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="resume.html">resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">about</a>
                     </li>
                 </ul>
             </div>
@@ -75,20 +76,25 @@
             <h1 class="name-header">work</h1>
             <h2 class="name-caption">a selection of personal, research, and school projects - shown chronologically</h2>
         </div>
+        <a id="scroll-button" class="float">
+            <p id="button-p">&darr;</p>
+        </a>
     </div>
+
+
 
     <section class="cover work-cover">
         <div class="wrapper container"></div>
     </section>
     <section id="p-cover" class="project-cover container">
         <div class="project container">
-            <h1 id="first-item" class="project-header first-top-buffer">Bio-Inspired Adhesives for Human Skin</h1>
+            <h1 id="item1" class="project-header first-top-buffer">Bio-Inspired Adhesives for Human Skin</h1>
             <div class="row skill-row">
                 <div class="col">
                     <span class="skill-badge">Design</span>
-                    <span class="skill-badge">Mechanics</span>
-                    <span class="skill-badge">MATLAB</span>
                     <span class="skill-badge">Image Processing</span>
+                    <span class="skill-badge">MATLAB</span>
+                    <span class="skill-badge">Mechanics</span>
                 </div>
             </div>
             <div class="row">
@@ -99,7 +105,7 @@
                 </div>
             </div>
             <!-- next project -->
-            <h1 class="project-header top-buffer">ParkFast</h1>
+            <h1 id="item2" class="project-header top-buffer">ParkFast</h1>
             <div class="row skill-row">
                 <div class="col">
                     <span class="skill-badge">Machine Learning</span>
@@ -116,12 +122,12 @@
             </div>
             <!-- end of project -->
             <!-- next project -->
-            <h1 class="project-header top-buffer">Erasable Printer Ink</h1>
+            <h1 id="item3" class="project-header top-buffer">Erasable Printer Ink</h1>
             <div class="row skill-row">
                 <div class="col">
-                    <span class="skill-badge">Materials Science</span>
                     <span class="skill-badge">Chemistry</span>
                     <span class="skill-badge">Design</span>
+                    <span class="skill-badge">Materials Science</span>
                 </div>
             </div>
             <div class="row">
@@ -134,12 +140,12 @@
             </div>
             <!-- end of project -->
             <!-- next project -->
-            <h1 class="project-header top-buffer">Reactor Head for Gas Deposition</h1>
+            <h1 id="item4" class="project-header top-buffer">Reactor Head for Gas Deposition</h1>
             <div class="row skill-row">
                 <div class="col">
-                    <span class="skill-badge">Design</span>
-                    <span class="skill-badge">ANSYS Fluent</span>
                     <span class="skill-badge">3D Printing</span>
+                    <span class="skill-badge">ANSYS Fluent</span>
+                    <span class="skill-badge">Design</span>
                 </div>
             </div>
             <div class="row">
@@ -151,7 +157,7 @@
             </div>
             <!-- end of project -->
             <!-- next project -->
-            <h1 class="project-header top-buffer">Cryo-Holder for TEMs</h1>
+            <h1 id="item5" class="project-header top-buffer">Cryo-Holder for TEMs</h1>
             <div class="row skill-row">
                 <div class="col">
                     <span class="skill-badge">Design</span>
@@ -168,12 +174,13 @@
             </div>
             <!-- end of project -->
             <!-- next project -->
-            <h1 class="project-header top-buffer">Cancer Dataset and Pathway Visualizations</h1>
+            <h1 id="item6" class="project-header top-buffer">Cancer Dataset and Pathway Visualizations</h1>
             <div class="row skill-row">
                 <div class="col">
                     <span class="skill-badge">Data Analysis</span>
-                    <span class="skill-badge">Visualizations</span>
+
                     <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">Visualizations</span>
                 </div>
             </div>
             <div class="row">
@@ -193,23 +200,26 @@
             <div class="row justify-content-center">
                 <div style="position:absolute;bottom:20px;">
                     <p class="text-center" style="color:white;font-weight: 300">
-                        Copyright &copy; Aly Hassan <script>document.write(new Date().getFullYear())</script></p>
+                        Copyright &copy; Aly Hassan <script>
+                            document.write(new Date().getFullYear())
+
+                        </script>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
     <!-- /.container -->
-    
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        
         function adjustHeight(e) {
             var e_last = document.getElementById("last-link");
             var last_position = e_last.getBoundingClientRect().top;
-            var e_first = document.getElementById("first-item");
+            var e_first = document.getElementById("item1");
             var first_position = e_first.getBoundingClientRect().top;
 
 
@@ -219,7 +229,7 @@
             e_cover.style.height = newheight + "px";
             console.log(newheight);
         }
-        
+
         jQuery(document).ready(function($) {
 
             // Store the window width
@@ -244,7 +254,28 @@
 
         });
 
-        window.addEventListener('load',adjustHeight);
+        window.addEventListener('load', adjustHeight);
+
+    </script>
+
+    <script>
+        var counter = 1;
+        jQuery("#scroll-button").click(function() {
+            if(counter == 1){
+                jQuery('#button-p').html('&darr;')
+            }
+            
+            jQuery('html,body').animate({
+                    scrollTop: $("#item"+counter).offset().top-80
+                },
+                'slow');
+            if(counter == 6){
+                counter = 1;
+                jQuery('#button-p').html('&uarr;')
+            }else{
+                counter = counter + 1;
+            }
+        });
 
     </script>
 

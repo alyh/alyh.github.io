@@ -1,0 +1,36 @@
+.float{
+	position:fixed;
+	width:80px;
+	height:80px;
+	bottom:30px;
+	right:30px;
+	background: linear-gradient(to right,#b40065e0,#821e81e0);
+	color:white;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 8px #777;
+    z-index: 10000!important;
+    text-decoration: none;
+    border: 3px solid white;
+}
+.float:hover{
+    text-decoration: none;
+    color:white;
+}
+
+.float p{
+    font-size: 3.2em;
+    font-weight: 300;
+    color:white;
+}
+
+@media only screen and (max-width: 575px) {
+    .float{
+        visibility: visible;
+    }
+}
+@media only screen and (min-width: 576px) {
+    .float{
+        visibility: hidden;
+    }
+}
