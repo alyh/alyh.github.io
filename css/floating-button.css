@@ -1,27 +1,27 @@
 .float{
 	position:fixed;
-	width:80px;
-	height:80px;
+	width:60px;
+	height:60px;
 	bottom:30px;
 	right:30px;
-	background: linear-gradient(to right,#b40065e0,#821e81e0);
-	color:white;
+	/*background: linear-gradient(to right,#b40065e0,#821e81e0);*/
+     background:  linear-gradient(to right,rgba(250, 180, 84, 0.5), rgba(250, 243, 84, 0.5));
+  /*  background-color:white;*/
 	border-radius:50px;
 	text-align:center;
-	box-shadow: 2px 2px 8px #777;
+	box-shadow: 2px 2px 8px #999;
     z-index: 10000!important;
     text-decoration: none;
-    border: 3px solid white;
-}
-.float:hover{
-    text-decoration: none;
-    color:white;
+    border: 1px solid black;
 }
 
 .float p{
-    font-size: 3.2em;
+    font-size: 2.4em;
     font-weight: 300;
-    color:white;
+     color:black;/*#faab56;
+    background:  linear-gradient(to bottom, rgba(250, 243, 84, 1),rgba(250, 170, 84, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
 }
 
 @media only screen and (max-width: 575px) {

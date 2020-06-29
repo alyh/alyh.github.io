@@ -261,12 +261,13 @@
     <script>
         var counter = 1;
         jQuery("#scroll-button").click(function() {
+            console.log($(window).scrollTop())
             if(counter == 1){
                 jQuery('#button-p').html('&darr;')
             }
             
             jQuery('html,body').animate({
-                    scrollTop: $("#item"+counter).offset().top-80
+                    scrollTop: $("#item"+counter).offset().top-window.innerHeight*0.2
                 },
                 'slow');
             if(counter == 6){
