@@ -164,6 +164,16 @@ section {
     background: rgba(255, 255, 255, 0.3);
     text-align: center;
 }
+.card-link{
+    text-decoration: none;
+    color:black;
+    height:100%;
+    display:block;
+}
+.card-link:hover{
+    text-decoration: none;
+    color:black;
+}
 
 a.read-more-link {
     padding-bottom: 5px;
