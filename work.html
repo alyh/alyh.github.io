@@ -77,7 +77,7 @@
             <h2 class="name-caption">a selection of personal, research, and school projects - shown chronologically</h2>
         </div>
         <a id="scroll-button" class="float">
-            <p id="button-p">&darr;</p>
+            <p id="button-p" class="noselect">&darr;</p>
         </a>
     </div>
 
@@ -227,7 +227,7 @@
             var newheight = last_position - first_position + 450;
 
             e_cover.style.height = newheight + "px";
-            console.log(newheight);
+            //  console.log(newheight);
         }
 
         jQuery(document).ready(function($) {
@@ -248,35 +248,56 @@
 
                 }
 
-                // Otherwise do nothing
+            });
 
+
+            // scroll button
+            var counter = 1;
+            var i;
+            var targets = [];
+            for (i = 1; i < 7; i++) {
+                targets[i - 1] = $("#item" + i).offset().top; //document.getElementById("item"+i).getBoundingClientRect().top;
+            }
+
+            jQuery("#scroll-button").click(function() {
+
+                var scrollPos = $(window).scrollTop();
+                var buffer = window.innerHeight * 0.2;
+                
+                // loop through all divs and see which one to scroll to
+                var j;
+                for (j = 1; j < 7; j++) {
+                    if (scrollPos > (targets[j-1] - buffer - 10)) {
+                       
+                        if(j==6){ // if we're at or past last div, go up
+                            jQuery('#button-p').html('&darr;');
+                            jQuery('html,body').animate({
+                                scrollTop: $("#item1").offset().top - buffer
+                            },
+                            'slow');
+                            break;
+                        }
+                        
+                        continue; // too close to this div or passed it, keep going
+                    } else {
+                        // scroll to the next div
+                        jQuery('html,body').animate({
+                                scrollTop: $("#item" + j).offset().top - buffer
+                            },
+                            'slow');
+                        
+                        if(j==6){ // if it's the last div, show up arrow
+                            jQuery('#button-p').html('&uarr;')
+                        }
+                        
+                        break;
+                    }
+                }
             });
 
         });
 
         window.addEventListener('load', adjustHeight);
-
-    </script>
-
-    <script>
-        var counter = 1;
-        jQuery("#scroll-button").click(function() {
-            console.log($(window).scrollTop())
-            if(counter == 1){
-                jQuery('#button-p').html('&darr;')
-            }
-            
-            jQuery('html,body').animate({
-                    scrollTop: $("#item"+counter).offset().top-window.innerHeight*0.2
-                },
-                'slow');
-            if(counter == 6){
-                counter = 1;
-                jQuery('#button-p').html('&uarr;')
-            }else{
-                counter = counter + 1;
-            }
-        });
 
     </script>
 

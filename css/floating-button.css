@@ -5,7 +5,7 @@
 	bottom:30px;
 	right:30px;
 	/*background: linear-gradient(to right,#b40065e0,#821e81e0);*/
-     background:  linear-gradient(to right,rgba(250, 180, 84, 0.5), rgba(250, 243, 84, 0.5));
+     background:  linear-gradient(to right,rgba(250, 180, 84, 0.7), rgba(250, 243, 84, 0.7));
   /*  background-color:white;*/
 	border-radius:50px;
 	text-align:center;
@@ -14,6 +14,7 @@
     text-decoration: none;
     border: 1px solid black;
     padding-bottom: env(safe-area-inset-bottom);
+    cursor: pointer;
 }
 
 .float p{
@@ -34,4 +35,14 @@
     .float{
         visibility: hidden;
     }
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
