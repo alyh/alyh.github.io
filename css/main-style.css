@@ -46,6 +46,10 @@ strong {
 */
 /* GENERAL */
 
+.work-logo-img {
+    padding-bottom: 10px;
+}
+
 section {
     background-repeat: repeat;
     position: relative;
@@ -164,15 +168,17 @@ section {
     background: rgba(255, 255, 255, 0.3);
     text-align: center;
 }
-.card-link{
+
+.card-link {
     text-decoration: none;
-    color:black;
-    height:100%;
-    display:block;
+    color: black;
+    height: 100%;
+    display: block;
 }
-.card-link:hover{
+
+.card-link:hover {
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
 a.read-more-link {
@@ -205,9 +211,9 @@ a.read-more-link:hover:before {
     width: 100%;
 }
 
-.quick-links-div{
-    padding-top:14px;
-    font-size:1.2em;
+.quick-links-div {
+    padding-top: 14px;
+    font-size: 1.2em;
 }
 
 a.quick-link {
@@ -271,9 +277,14 @@ a.quick-link:hover:before {
     .card {
         width: 70%;
     }
+
     .cover {
-    height: 57vh;
-}
+        height: 57vh;
+    }
+
+    .text-center {
+        text-align: left !important;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -302,9 +313,14 @@ a.quick-link:hover:before {
     .card {
         width: 70%;
     }
-     .cover {
-    height: 50vh;
-}
+
+    .cover {
+        height: 50vh;
+    }
+
+    .text-center {
+        text-align: left !important;
+    }
 }
 
 
@@ -341,6 +357,10 @@ a.quick-link:hover:before {
     .card {
         width: 100%;
         margin-left: 0
+    }
+
+    .text-center {
+        text-align: center !important;
     }
 }
 
