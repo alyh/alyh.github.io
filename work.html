@@ -86,9 +86,13 @@
     <section class="cover work-cover">
         <div class="wrapper container"></div>
     </section>
+    <section class="spacer-cover container">
+         <div class="inner-spacer-container container"></div>
+        <div class="wrapper container"></div>
+    </section>
     <section id="p-cover" class="project-cover container">
         <div class="project container">
-            <h1 id="item1" class="project-header first-top-buffer">Bio-Inspired Adhesives for Human Skin</h1>
+            <h1 id="item1" class="project-header">Bio-Inspired Adhesives for Human Skin</h1>
             <div class="row skill-row">
                 <div class="col">
                     <span class="skill-badge">Design</span>
@@ -195,6 +199,10 @@
         </div>
         <div class="wrapper container"></div>
     </section>
+        <section class="spacer-cover-2 container">
+            <div class="inner-spacer-container-2 container"></div>
+        <div class="container wrapper"></div>
+    </section>
     <section class="other-cover">
         <div class="wrapper container justify-content-center">
             <div class="row justify-content-center">
@@ -224,7 +232,7 @@
 
 
             var e_cover = document.getElementById("p-cover");
-            var newheight = last_position - first_position + 450;
+            var newheight = last_position - first_position + 250;
 
             e_cover.style.height = newheight + "px";
             //  console.log(newheight);
@@ -263,21 +271,21 @@
 
                 var scrollPos = $(window).scrollTop();
                 var buffer = window.innerHeight * 0.2;
-                
+
                 // loop through all divs and see which one to scroll to
                 var j;
                 for (j = 1; j < 7; j++) {
-                    if (scrollPos > (targets[j-1] - buffer - 10)) {
-                       
-                        if(j==6){ // if we're at or past last div, go up
+                    if (scrollPos > (targets[j - 1] - buffer - 10)) {
+
+                        if (j == 6) { // if we're at or past last div, go up
                             jQuery('#button-p').html('&darr;');
                             jQuery('html,body').animate({
-                                scrollTop: $("#item1").offset().top - buffer
-                            },
-                            'slow');
+                                    scrollTop: $("#item1").offset().top - buffer
+                                },
+                                'slow');
                             break;
                         }
-                        
+
                         continue; // too close to this div or passed it, keep going
                     } else {
                         // scroll to the next div
@@ -285,11 +293,11 @@
                                 scrollTop: $("#item" + j).offset().top - buffer
                             },
                             'slow');
-                        
-                        if(j==6){ // if it's the last div, show up arrow
+
+                        if (j == 6) { // if it's the last div, show up arrow
                             jQuery('#button-p').html('&uarr;')
                         }
-                        
+
                         break;
                     }
                 }

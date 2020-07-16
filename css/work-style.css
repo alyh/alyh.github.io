@@ -1,8 +1,4 @@
-.wrapper:before {
-    top: 30vh;
-    height: 50vh;
-    transform: translate3d(-50%, -25%, 0);
-}
+
 
 .work-cover {
     margin: 0;
@@ -80,11 +76,6 @@
         font-size: 1rem;
     }
 
-    .wrapper:before {
-        top: 30vh;
-        height: 70vh;
-        transform: translate3d(-50%, -20%, 0);
-    }
 }
 
 
@@ -97,11 +88,6 @@
     .read-more-link,
     .project-caption {
         font-size: 1rem;
-    }
-    .wrapper:before {
-        top: 30vh;
-        height: 70vh;
-        transform: translate3d(-50%, -20%, 0);
     }
     .top-buffer{
         margin-top:30%;
@@ -137,11 +123,6 @@
     .project-img {
         margin: -15%;
         /*     max-height: 30vh;*/
-    }
-    .wrapper:before {
-        top: 30vh;
-        height: 50vh;
-        transform: translate3d(-50%, -30%, 0);
     }
 }
 

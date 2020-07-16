@@ -71,10 +71,6 @@
         </div>
     </nav>
 
-    <header>
-
-    </header>
-
     <!-- Page Content -->
     <div>
 
@@ -93,9 +89,14 @@
         </div>
 
         <section class="cover">
-            <div class="wrapper container"></div>
+            <div class="container wrapper"></div>
         </section>
-        <section id="proj-cover" class="project-cover container">
+         <section class="spacer-cover container">
+             <div class="inner-spacer-container container"></div>
+            <div class="container wrapper"></div>
+        </section>
+        <section id="proj-cover" class="project-cover">
+            <div class="container">
             <div class="project container">
                 <h1 id="first-project-item" class="project-header intro-buffer">work highlights</h1><br>
                 <div class="row">
@@ -193,7 +194,11 @@
                 </div>
 
             </div>
-            <div class="wrapper container"></div>
+                </div>
+        </section>
+         <section class="spacer-cover-2 container">
+             <div class="inner-spacer-container-2 container"></div>
+            <div class="container wrapper"></div>
         </section>
         <section class="other-cover">
             <div class="wrapper container justify-content-center">
@@ -246,7 +251,7 @@
             var first_position = e_first.getBoundingClientRect().top;
 
             var e_cover = document.getElementById("proj-cover");
-            var newheight = last_position - first_position + 200;
+            var newheight = last_position - first_position+200;
 
             if (newheight < 650) {
                 newheight = 800;
