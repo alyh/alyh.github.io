@@ -191,6 +191,9 @@ section {
     font-style: normal;
     padding-right: 50px;
 }
+.name-caption{
+    font-style: italic;
+}
 
 .card {
     margin-top: 10px;
