@@ -38,7 +38,7 @@
 
 .project-header {
     font-weight: 700;
-    font-style: italic;
+    font-style: normal;
 }
 
 .project-caption {
@@ -77,6 +77,10 @@ a.read-more-link {
     color: black;
     display: inline-block;
     line-height: 2rem;
+}
+
+.project-cover {
+    height: 100%;
 }
 
 /* Extra small devices (phones, 400px and down) */
